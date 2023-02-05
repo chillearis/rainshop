@@ -1,0 +1,139 @@
+﻿<!DOCTYPE HTML>
+<!--
+-->
+<html>
+<link rel="icon" href="fav.jpg" type="image/png" />
+<script type="text/javascript">
+	function noselect() {return false;}
+	 
+	function addHandler(event, handler){
+	 if (document.attachEvent) {
+	 document.attachEvent('on' + event, handler);
+	 }
+	 else if (document.addEventListener) {
+	 document.addEventListener(event, handler, false);
+	 }
+	 }
+	 
+	function killSelection(){
+	 if (window.getSelection) {
+	 window.getSelection().removeAllRanges();
+	 }
+	 else if (document.selection && document.selection.clear) {
+	 document.selection.clear();
+	 }
+	 }
+	 
+	function noSelectionEvent(event) {
+	 var event = event || window.event;
+	 
+	 var key = event.keyCode || event.which;
+	if (event.ctrlKey && (key == 65 || key == 85)) {
+	 killSelection();
+	if (event.preventDefault) { event.preventDefault(); }
+	 else { event.returnValue = false; }
+	 return false;
+	 }
+	 }
+	 
+	addHandler('keydown', noSelectionEvent);
+	addHandler('keyup', noSelectionEvent);
+</script>
+<script language=javascript> 
+<!--   
+function click(e) { 
+if (document.all) {
+if (event.button == 2) { // Чтобы отключить левую кнопку поставьте цифру 1 
+alert(message); // чтобы отключить среднюю кнопку поставьте цифру 1 
+return false;} 
+} 
+if (document.layers) {
+if (e.which == 3) { 
+alert(message); 
+return false;} 
+} 
+} 
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);} 
+document.onmousedown=click; 
+document.oncontextmenu=function(e){return false}; 
+//--> 
+</script>
+	<head>
+		<title>Rain Shop Site</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-diamond"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>RAin shop</h1>
+								<p>Самые дешевые цены во всем дискорде!</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="https://discord.gg/Y4QurA9eGd">Дискорд</a></li>
+								<li><a href="#prices">Наши товары</a></li>
+								<li><a href="#aboutshop">О проекте</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- How To Play -->
+							<article id="prices">
+								<center><h2 class="major">Наши цены</h2></center>
+								<p><center><font size="8">Премиумы</font></center></p>
+								<p><center>Spotify Premium - 65₽, вход на аккаунт</center></p>
+								<p><center>YouTube Premium - 150₽, вход на аккаунт</center></p>
+								<p><center><font size="8">Discord Nitro</font></center></p>
+								<p><center>Discord Nitro QR - Classic - 120₽, вход на аккаунт</center></p>
+								<p><center>Discord Nitro QR - Basic - 140₽, вход на аккаунт</center></p>
+								<p><center>Discord Nitro QR - Full - 200₽, вход на аккаунт</center></p>
+								<p><center><font size="8">Остальное</font></center></p>
+								<p><center>Xbox Game Pass - 100₽, вход на аккаунт</center></p>
+								<p><center>Покупка любой игры в Google Play - 5₽/1₺</center></p>
+							</article>
+
+						
+						<!-- How To Play -->
+						<article id="aboutshop">
+							<center><h2 class="major">О проекте</h2></center>
+							<p><font size=3>Rain Shop -  недавно открывшийся магазин товаров из России. Здесь вы можете купить нитро, Xbox Game Pass, Spotify Premium и так далее! А цены вас удивят, ведь они слишком низкие! Вы больше таких нигде не увидите!</font></p>
+						</article>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy;Design by: <a href="https://vk.com/noisygetout">noisy</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
